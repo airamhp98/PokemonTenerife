@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Producto Sellado - Pokémon Tenerife</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f2f2f2;
+      color: #333;
+      text-align: center;
+    }
+
+    header {
+      background-color: #003A70;
+      padding: 20px;
+    }
+
+    header img {
+      max-width: 180px;
+    }
+
+    nav {
+      background-color: #003A70;
+      padding: 15px 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    nav a {
+      margin: 0 20px;
+      text-decoration: none;
+      color: #FFCB05;
+      font-weight: bold;
+      font-size: 18px;
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: #e60012;
+    }
+
+    .ordenar-btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      background-color: #FFCB05;
+      color: #003A70;
+      cursor: pointer;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .item {
+      background-color: #fff;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 160px;
+    }
+
+    .item img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .whatsapp {
+      display: inline-block;
+      background-color: #25D366;
+      color: white;
+      padding: 15px 25px;
+      font-size: 18px;
+      border-radius: 10px;
+      text-decoration: none;
+      margin: 30px auto;
+    }
+
+    footer {
+      font-size: 14px;
+      color: #777;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="index.html"><img src="LogoPokemon.png" alt="Logo Pokémon Tenerife" /></a>
+  </header>
+
+  <nav>
+    <a href="singles.html">SINGLES</a>
+    <a href="sellado.html">PRODUCTO SELLADO</a>
+  </nav>
+
+  <button class="ordenar-btn" onclick="alternarOrden()">Ordenar por precio ↑</button>
+
+  <div class="gallery" id="contenedor-sellado"></div>
+
+  <script src="js/cargar-productos.js"></script>
+  <script>
+    let productosSellados = [];
+    let ordenAscendente = true;
+
+    cargarProductos("productos-sellados.json", "contenedor-sellado", (productos) => {
+      productosSellados = productos;
+    });
+
+    function alternarOrden() {
+      const btn = document.querySelector('.ordenar-btn');
+      ordenAscendente = !ordenAscendente;
+      btn.textContent = ordenAscendente ? "Ordenar por precio ↑" : "Ordenar por precio ↓";
+      ordenarPorPrecio();
+    }
+
+    function ordenarPorPrecio() {
+      const contenedor = document.getElementById("contenedor-sellado");
+      contenedor.innerHTML = "";
+
+      const ordenados = [...productosSellados].sort((a, b) => {
+        const precioA = parseFloat(a.precio.replace(",", "."));
+        const precioB = parseFloat(b.precio.replace(",", "."));
+        return ordenAscendente ? precioA - precioB : precioB - precioA;
+      });
+
+      ordenados.forEach(producto => {
+        const item = document.createElement("div");
+        item.className = "item";
+
+        const img = document.createElement("img");
+        img.src = producto.imagen;
+        img.alt = producto.nombre;
+
+        const texto = document.createElement("p");
+        texto.textContent = `${producto.nombre} - ${producto.precio}`;
+
+        item.appendChild(img);
+        item.appendChild(texto);
+        contenedor.appendChild(item);
+      });
+    }
+  </script>
+
+  <a class="whatsapp" href="https://wa.me/34680775177?text=Hola%2C%20quiero%20m%C3%A1s%20info%20sobre%20el%20producto%20sellado" target="_blank">
+    📲 Escríbeme por WhatsApp
+  </a>
+
+  <footer>
+    <p>Blog informativo. Productos de segunda mano. No afiliado a The Pokémon Company.</p>
+  </footer>
+</body>
+</html>
