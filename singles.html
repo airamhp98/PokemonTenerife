@@ -6,17 +6,47 @@
   <title>Singles - Pokémon Tenerife</title>
   <link rel="icon" type="image/png" href="favicon.png" />
   <style>
+    :root {
+      --bg-color: #f2f2f2;
+      --text-color: #333;
+      --card-bg: #ffffff;
+      --shadow-color: rgba(0,0,0,0.1);
+      --heading-color: #0055A4;
+      --nav-bg: #003A70;
+      --nav-text: #FFCB05;
+      --footer-color: #777;
+      --btn-bg: #FFCB05;
+      --btn-text: #003A70;
+      --whatsapp-bg: #25D366;
+    }
+
+    [data-theme="dark"] {
+      --bg-color: #1a1a1a;
+      --text-color: #e0e0e0;
+      --card-bg: #2d2d2d;
+      --shadow-color: rgba(0,0,0,0.3);
+      --heading-color: #4a9eff;
+      --nav-bg: #002347;
+      --nav-text: #FFCB05;
+      --footer-color: #999;
+      --btn-bg: #FFCB05;
+      --btn-text: #002347;
+      --whatsapp-bg: #1a472a;
+    }
+
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      background-color: #f2f2f2;
-      color: #333;
+      background-color: var(--bg-color);
+      color: var(--text-color);
       text-align: center;
+      transition: background-color 0.3s, color 0.3s;
     }
 
     header {
-      background-color: #003A70;
+      background-color: var(--nav-bg);
       padding: 20px;
+      position: relative;
     }
 
     header img {
@@ -24,15 +54,15 @@
     }
 
     nav {
-      background-color: #003A70;
+      background-color: var(--nav-bg);
       padding: 15px 0;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 5px var(--shadow-color);
     }
 
     nav a {
       margin: 0 20px;
       text-decoration: none;
-      color: #FFCB05;
+      color: var(--nav-text);
       font-weight: bold;
       font-size: 18px;
       transition: color 0.2s;
@@ -48,9 +78,15 @@
       font-weight: bold;
       border: none;
       border-radius: 8px;
-      background-color: #FFCB05;
-      color: #003A70;
+      background-color: var(--btn-bg);
+      color: var(--btn-text);
       cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .ordenar-btn:hover {
+      opacity: 0.9;
+      transform: scale(1.05);
     }
 
     .gallery {
@@ -62,11 +98,17 @@
     }
 
     .item {
-      background-color: #fff;
+      background-color: var(--card-bg);
       padding: 10px;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      box-shadow: 0 0 10px var(--shadow-color);
       width: 160px;
+      transition: all 0.3s;
+    }
+
+    .item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px var(--shadow-color);
     }
 
     .item img {
@@ -76,19 +118,44 @@
 
     .whatsapp {
       display: inline-block;
-      background-color: #25D366;
+      background-color: var(--whatsapp-bg);
       color: white;
       padding: 15px 25px;
       font-size: 18px;
       border-radius: 10px;
       text-decoration: none;
       margin: 30px auto;
+      transition: all 0.3s;
+    }
+
+    .whatsapp:hover {
+      transform: scale(1.05);
+      opacity: 0.9;
     }
 
     footer {
       font-size: 14px;
-      color: #777;
+      color: var(--footer-color);
       padding: 20px;
+    }
+
+    #theme-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: none;
+      border: 2px solid var(--nav-text);
+      color: var(--nav-text);
+      padding: 8px 12px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 20px;
+      transition: all 0.3s;
+    }
+
+    #theme-toggle:hover {
+      background-color: var(--nav-text);
+      color: var(--nav-bg);
     }
   </style>
 </head>
@@ -96,17 +163,20 @@
 
   <header>
     <a href="index.html"><img src="LogoPokemon.png" alt="Logo Pokémon Tenerife" /></a>
+    <button id="theme-toggle" onclick="toggleTheme()" title="Cambiar tema">🌙</button>
   </header>
 
   <nav>
     <a href="singles.html">SINGLES</a>
     <a href="sellado.html">PRODUCTO SELLADO</a>
+    <a href="compra.html">COMPRAMOS TUS CARTAS</a>
   </nav>
 
   <button class="ordenar-btn" onclick="alternarOrden()">Ordenar por precio ↑</button>
 
   <div class="gallery" id="contenedor-singles"></div>
 
+  <script src="js/theme.js"></script>
   <script src="js/cargar-productos.js"></script>
   <script>
     let productosOriginales = [];
