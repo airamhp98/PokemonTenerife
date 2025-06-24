@@ -20,7 +20,7 @@
     "imagen": "https://kantocards.com/cdn/shop/files/811hyPaG_OL._AC_SL1500.jpg?v=1747944451"
   },
   {
-    "nombre": "ETB Destined Rivals (ES)",
+    "nombre": "ETB Rivales Predestinados (ES)",
     "precio": "59.95€",
     "imagen": "https://flashstore.es/wp-content/uploads/2025/05/etb_team_rocket.jpg"
   },
@@ -31,7 +31,13 @@
   },
   {
     "nombre": "Booster 36 sobres Rivales Predestinados (ES)",
-    "precio": "220€",
+    "precio": "219,95€",
     "imagen": "https://www.pokemon.com/static-assets/content-assets/cms2-es-xl/img/trading-card-game/_tiles/sv/sv10/product-showcase/inline/sv10-booster-display-box-latam.png"
+  },
+    {
+    "nombre": "Booster 18 sobres Rivales Predestinados (ES)",
+    "precio": "99.95€",
+    "imagen": "https://www.pokemon.com/static-assets/content-assets/cms2-es-xl/img/trading-card-game/_tiles/sv/sv10/product-showcase/inline/sv10-booster-display-box-latam.png"
+  }"
   }
 ]
