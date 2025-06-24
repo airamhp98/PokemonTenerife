@@ -1,43 +1,33 @@
 [
   {
-    "nombre": "Eevee Pouch Evoluciones Prismáticas (ES)",
-    "precio": "35€",
-    "imagen": "https://colecciona.mx/cdn/shop/files/8a61e534..jpg?v=1748399786&width=898"
+    "nombre": "Booster Bundle 151 (ING)",
+    "precio": "59.95€",
+    "imagen": "https://d2j6dbq0eux0bg.cloudfront.net/images/51000416/3682890553.jpg"
   },
   {
-    "nombre": "Blister x3 Juntos de Aventura (ES)",
-    "precio": "18€",
-    "imagen": "https://mundostars.es/wp-content/uploads/2025/05/pokemon-tcg-sobres-juntos-de-aventuras-3.jpg"
+    "nombre": "Booster Bundle Prismatic (ING)",
+    "precio": "59.95€",
+    "imagen": "https://d2j6dbq0eux0bg.cloudfront.net/images/51000416/4651259836.png"
+  },
+  {
+    "nombre": "Booster Bundle Prismatic (ES)",
+    "precio": "49.95€",
+    "imagen": "https://latiendadelascartas.com/cdn/shop/files/Pokemon_TCG_Scarlet_Violet_Prismatic_Evolutions_Booster_Bundle_ES_png.jpg?v=1741900562"
+  },
+  {
+    "nombre": "Super-Premium Collection Evoluciones Prismáticas (ES)",
+    "precio": "149.95€",
+    "imagen": "https://kantocards.com/cdn/shop/files/811hyPaG_OL._AC_SL1500.jpg?v=1747944451"
+  },
+  {
+    "nombre": "ETB Destined Rivals (ES)",
+    "precio": "59.95€",
+    "imagen": "https://flashstore.es/wp-content/uploads/2025/05/etb_team_rocket.jpg"
   },
   {
     "nombre": "Pokéballs 2023 (2x Cielos Evolutivos + 1 Astros Brillantes) (ES)",
-    "precio": "25€ la bola",
+    "precio": "25€",
     "imagen": "https://www.pokemillon.com/cdn/shop/files/Capturadepantalla2024-01-17190737_530x.png?v=1747277359"
-  },
-  {
-    "nombre": "ETB Llamas Obsidianas (ES)",
-    "precio": "55€",
-    "imagen": "https://flashstore.es/wp-content/uploads/2023/05/ObsidianFlamesETB.jpg"
-  },
-  {
-    "nombre": "ETB Juntos de Aventuras (ES)",
-    "precio": "55€",
-    "imagen": "https://sunnystore.es/cdn/shop/files/siguemeeninstagram_1920x1920px_-2025-03-17T133644.834-Photoroom.jpg?v=1744710569&width=1946"
-  },
-  {
-    "nombre": "ETB Evoluciones de Paldea (ES)",
-    "precio": "54€",
-    "imagen": "https://mundodistorsion.es/wp-content/uploads/2025/03/etb-evoluciones-de-paldea.webp"
-  },
-  {
-    "nombre": "ETB Pokémon GO (ING)",
-    "precio": "70€",
-    "imagen": "https://flashstore.es/wp-content/uploads/2023/01/etbPokemonGo.jpg"
-  },
-  {
-    "nombre": "Booster 6 sobres Juntos de Aventura (ES)",
-    "precio": "32€",
-    "imagen": "https://flashstore.es/wp-content/uploads/2025/04/juntosbb.jpg"
   },
   {
     "nombre": "Booster 36 sobres Rivales Predestinados (ES)",
